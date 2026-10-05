@@ -1,0 +1,53 @@
+﻿variable,"original_question (Russian, truncated)",type,description / coding
+age_group,Ваша возрастная группа,cat,Age group
+childhood_place,Где прошло ваше детство?,cat,Where childhood was spent
+marital_status,Семейное положение,cat,Marital status
+has_children,Есть ли у вас дети?,bin,Has children (1=yes)
+mother_edu,Уровень образования матери,cat,Mother's education
+father_edu,Уровень образования отца,cat,Father's education
+siblings,Сколько у вас братьев/сестёр?  ( число),num,Number of siblings (free text parsed to number; 'Нас 5' read as 4 siblings)
+birth_order,Какой по счёту ребёнок в семье?,cat,Birth order in family
+family_finance,Финансовое положение семьи в детстве,lik,"Family financial situation in childhood, self-rated 1-5"
+family_religiosity,Насколько религиозной была ваша семья?,lik,"Family religiosity, self-rated 1-5 (higher = more religious)"
+highest_edu,Ваш высший уровень образования и специальность,cat,Highest education
+specialty_text,Специальность / направление обучения,text,Specialty (free text)
+stem_class,Учились ли вы в специализированном/продвинутом STEM-классе или программе в школе?,bin,Attended specialised STEM class/programme (1=yes)
+olympiad,Участвовали ли вы когда-нибудь в STEM-олимпиаде или конкурсе?,bin,Ever took part in a STEM olympiad/competition (1=yes)
+olympiad_level,"Если ""Да""",cat,Highest olympiad level (only if olympiad=yes)
+why_not,"Если вы ответили ""Нет"" на любой из вопросов выше — почему?",cat,Reason for not taking part (asked if 'No' to STEM class or olympiad)
+role_model,"Был ли у вас в детстве женский ролевой пример в STEM/IT (учительница, родственница, публичная фигура)?",bin,Had a female STEM/IT role model in childhood (1=yes)
+role_model_who,Кто это был и какую роль играл(а)?,text,Who the role model was (free text)
+parents_support,Мои родители активно поддерживали моё стремление к STEM/IT,lik,Parents actively supported my STEM/IT aspirations (1=strongly disagree … 5=strongly agree)
+teacher_support,Мои учителя активно поддерживали моё стремление к STEM-предметам,lik,Teachers actively supported my STEM aspirations (same scale)
+teacher_suggested,Мои учителя конкретно предлагали мне участвовать в олимпиадах или конкурсах,lik,Teachers specifically suggested olympiads/competitions (same scale)
+family_suitable,Моя семья или окружение считали STEM/IT «подходящей» сферой для женщины,lik,Family/environment saw STEM/IT as 'suitable' for a woman (same scale)
+belonging,"Я чувствовала, что мне есть место в классах/пространствах, где мальчиков было больше",lik,I felt I belonged in classes/spaces with more boys (same scale; POSITIVELY worded)
+self_doubt,"Я сомневалась в своих способностях в STEM сильнее, чем сомневалась в одноклассниках-мальчиках",lik,I doubted my STEM ability more than male classmates (same scale)
+few_women_doubt,"То, что вокруг было мало женщин в STEM, заставляло меня сомневаться, стоит ли продолжать",lik,Few women around made me doubt continuing (same scale)
+moment_text,Опишите один конкретный момент...,text,A specific moment (free text)
+employment,Текущий статус занятости,cat,Current employment status
+job_text,Должность / сфера и стаж работы в IT/STEM,text,Position / sector / tenure (free text)
+interview_family_q,"Спрашивали ли вас на собеседовании о браке, беременности или планах на детей?",bin,Asked at interview about marriage/pregnancy/children (1=yes; 'n/a' → missing)
+maternity_leave,Уходили ли вы в декретный отпуск?,bin,Took maternity leave (1=yes; 'n/a' → missing)
+maternity_career_impact,Это заметно повлияло на ваш карьерный рост?,bin,This noticeably affected career growth (1=yes; 'n/a' → missing)
+colleague_behaviour,Сталкивались ли вы со следующим со стороны коллег-мужчин ?,multi,Experiences with male colleagues (multi-select; see beh_* columns)
+pay_fair,"Я считаю, что мне платят справедливо по сравнению с коллегами-мужчинами на похожих позициях",lik,I am paid fairly compared with male peers (same scale; workers only)
+family_status_affected,Моё семейное положение или наличие детей повлияло на решения о найме или повышении,lik,Family status/children affected hiring/promotion (same scale)
+prove_competence,"Мне приходилось доказывать свою компетентность больше, чем коллегам-мужчинам",lik,Had to prove competence more than male colleagues (same scale)
+anti_disc_policy,На моей работе есть чёткие и соблюдаемые политики против гендерной дискриминации,lik,"Workplace has clear, enforced anti-discrimination policies (same scale)"
+salary_vs_men,Как примерно ваша зарплата соотносится с зарплатой коллег-мужчин?,cat,Salary relative to male colleagues ('n/a' → missing)
+top3_measures,Выберите топ-3 самых эффективных меры,multi,Top-3 most effective measures (multi-select; see meas_* columns)
+mentor,Был ли у вас формальный или неформальный ментор в STEM/IT?,bin,Had a formal/informal mentor (1=yes)
+mentor_would_change,Наличие ментора значительно изменило бы (или изменило) мой путь в STEM/IT,lik,A mentor would have changed my path (same scale)
+women_leaders_inspire,Больше женщин на руководящих позициях побудило бы больше девушек пойти в STEM,lik,More women in leadership would draw more girls to STEM (same scale)
+one_change,Какое ОДНО изменение сделало бы наибольшую разницу лично для вас?,cat,ONE change that would matter most to me
+resp_id,(generated),id,"Anonymous respondent id, order of rows in export"
+adult,(derived),bin,1 = age 18+
+age_lt25,(derived),bin,1 = under 18 or 18–24
+village,(derived),bin,1 = childhood in a village
+bishkek,(derived),bin,1 = childhood in Bishkek
+emp_group,(derived),cat,IT/STEM workers / Non-STEM workers / Other
+stem_field,(derived),bin,1 = adult whose specialty is STEM/IT (see data/specialty_coding.csv); missing for minors and school-only
+beh_*,(derived),bin,1/0 per colleague-behaviour option among those it applies to (n/a → missing)
+meas_*,(derived),bin,1/0 per measure selected in top-3 list
+n_measures_chosen,(derived),num,How many measures were ticked (>3 means the limit was exceeded)

@@ -1,0 +1,27 @@
+# Raw Google Forms export contains contact details (Telegram/WhatsApp) - never commit it
+raw/
+*raw*.xlsx
+*export*.xlsx
+*.csv.bak
+
+# Row-level data stays local (paper promises confidentiality; free text can identify people).
+# analysis.py still writes these files here, so manual_code edits are kept between runs.
+data/survey_clean_anonymized.xlsx
+data/specialty_coding.csv
+private/
+
+# Excel lock files
+~$*.xlsx
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

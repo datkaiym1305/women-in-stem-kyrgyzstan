@@ -1,0 +1,6 @@
+Loaded 61 responses x 44 columns
+Siblings: 8 free-text entries parsed to numbers: [('R05', '2 сестры '), ('R12', '3 siblings'), ('R18', 'Нас 5'), ('R38', '2 брата 2 сестры'), ('R40', '1 сестра 2 брата'), ('R42', '1братишка 2сестры'), ('R46', '1 брат и 1 сестра'), ('R47', '3 сестры ')]
+Respondents choosing more than 3 measures: 15 (kept as given)
+STEM field (adults with a coded specialty): 47 | STEM: 18 | flagged needs_review: 6
+Python 3.12.3 | pandas 3.0.2 | scipy 1.17.1
+Tests run in sheet 5: 39 | significant after Holm: 7 | p<.05 unadjusted: 16
